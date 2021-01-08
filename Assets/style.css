@@ -1,4 +1,11 @@
-table, th, td {
+cityName {
     border: 1px solid black;
     padding: 5px;
+}
+  search-header{
+      background-color: lightblue;
+
+}
+fiveDayCard{
+    background-color: gray;
 }
