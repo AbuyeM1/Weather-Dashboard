@@ -9,6 +9,7 @@ function searchWeather() {
     // add to history
     addHistory(searchInput.val());
     var cityName = searchInput.val();
+    // variable for current weather working apikey
     var weatherAPIurl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKEY;
 
     $.ajax({
@@ -16,7 +17,7 @@ function searchWeather() {
         method: "GET",
     }).then(function (response) {
         console.log(response);
-
+      // for adjust the date
         var date = new Date(response.dt * 1000).toLocaleDateString();
 
         var icon2 = response.weather[0].icon;
@@ -31,7 +32,7 @@ function searchWeather() {
         var lon = response.coord.lon;
         findUVIndex(lat, lon);
     })
-
+    // variable for current weather working apikey
     var forecastAPIurl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + APIKEY;
 
     $.ajax({
