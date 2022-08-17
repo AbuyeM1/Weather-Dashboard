@@ -8,3 +8,6 @@ search-header {
 fiveDayCard {
   background-color: gray;
 }
+#searchButton {
+  margin-left: 5px;
+}
